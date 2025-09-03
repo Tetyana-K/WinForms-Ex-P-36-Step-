@@ -1,4 +1,4 @@
-﻿namespace WinForms_Ex_P_36__Step_
+﻿namespace Calc_demo
 {
     partial class Form1
     {
@@ -28,71 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            pictureBox1 = new PictureBox();
-            timer1 = new System.Windows.Forms.Timer(components);
+            textBox1 = new TextBox();
             button1 = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            numericUpDown1 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // textBox1
             // 
-            pictureBox1.Location = new Point(392, 231);
-            pictureBox1.Margin = new Padding(4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(129, 70);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
+            textBox1.Location = new Point(88, 31);
+            textBox1.Margin = new Padding(4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(127, 29);
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(392, 66);
+            button1.Location = new Point(88, 138);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(107, 32);
+            button1.Size = new Size(129, 32);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Calc square";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(423, 18);
+            label1.Location = new Point(88, 229);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(52, 21);
             label1.TabIndex = 2;
             label1.Text = "label1";
-            label1.Click += label1_Click;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(249, 31);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(51, 29);
+            numericUpDown1.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 421);
+            ClientSize = new Size(329, 321);
+            Controls.Add(numericUpDown1);
             Controls.Add(label1);
             Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            Controls.Add(textBox1);
             Font = new Font("Segoe UI", 12F);
             Margin = new Padding(4);
             Name = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private TextBox textBox1;
         private Button button1;
         private Label label1;
+        private NumericUpDown numericUpDown1;
     }
 }
