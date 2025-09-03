@@ -19,7 +19,7 @@ namespace First_Demo
 
             //if (result == DialogResult.OK)
            // {
-                Application.Run(new Form1());
+                Application.Run(new Form2());
             //}
             //else
             //{

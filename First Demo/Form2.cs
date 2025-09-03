@@ -15,7 +15,19 @@ namespace First_Demo
         public Form2()
         {
             InitializeComponent();
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello!", "Greeting", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bye!", "Close form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
         }
     }
 }
