@@ -45,10 +45,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(88, 138);
+            button1.Location = new Point(28, 138);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(129, 32);
+            button1.Size = new Size(288, 32);
             button1.TabIndex = 1;
             button1.Text = "Calc square";
             button1.UseVisualStyleBackColor = true;
@@ -66,6 +66,8 @@
             // 
             // numericUpDown1
             // 
+            numericUpDown1.DecimalPlaces = 2;
+            numericUpDown1.Increment = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDown1.Location = new Point(249, 31);
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(51, 29);
@@ -84,6 +86,7 @@
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();

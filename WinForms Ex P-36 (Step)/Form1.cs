@@ -9,7 +9,7 @@ namespace WinForms_Ex_P_36__Step_
             InitializeComponent();
         }
 
-        System.Windows.Forms.Timer timerCloseForm= new();
+        System.Windows.Forms.Timer timerCloseForm= new(); // прграмно створюємо таймер для закриття форми
         List<string> pictures =
         [
             @"https://hips.hearstapps.com/hmg-prod/images/gettyimages-180680638-676f621f720bc.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
@@ -19,17 +19,19 @@ namespace WinForms_Ex_P_36__Step_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile("../../../icons/icons8-ok-hand-emoji-96.png");
+            pictureBox1.Image = Image.FromFile("../../../icons/icons8-ok-hand-emoji-96.png"); // можна картинку завантажити з файлу
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             MovePictureToCenter();
             //pictureBox1.Left = (this.ClientSize.Width - pictureBox1.Width) / 2;
             //pictureBox1.Top = (this.ClientSize.Height - pictureBox1.Height) / 2;
 
-            timer1.Interval = 1000; // 1 секунда
-            timer1.Start();
-            timerCloseForm.Interval = 10000; // 10 секунд
-            timerCloseForm.Start();
-            timerCloseForm.Tick += TimerCloseForm_Tick;
+            timer1.Interval = 1000; // таймер буде спрацбовувати кожну  секунду
+            timer1.Start(); // запускаємо таймер
+            //timer1.Enabled = true; // можна так запускати таймер
+
+            timerCloseForm.Interval = 10000; // 10 секунд для таймера закриття форми
+            timerCloseForm.Start(); // запускаємо таймер закриття форми
+            timerCloseForm.Tick += TimerCloseForm_Tick; // підписуємося на подію Tick таймера закриття форми
 
 
         }
@@ -37,7 +39,7 @@ namespace WinForms_Ex_P_36__Step_
         private void TimerCloseForm_Tick(object? sender, EventArgs e)
         {
             MessageBox.Show("Time's up! Closing the form.");// "Час вийшов! Форма закривається."
-            this.Close();
+            this.Close(); // закриваємо форму
         }
 
         Random rnd = new Random();
@@ -60,16 +62,18 @@ namespace WinForms_Ex_P_36__Step_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
-            timer1.Start();
+           timer1.Stop();
+           timer1.Start();
+           //timer1.Interval += 1000; 
             MovePictureToCenter();
-
         }
 
         private void MovePictureToCenter()
         {
-            pictureBox1.Left = (this.ClientSize.Width - pictureBox1.Width) / 2;
-            pictureBox1.Top = (this.ClientSize.Height - pictureBox1.Height) / 2;
+            // (this.ClientSize.Width = ширина клієнтської частини форми
+            // (this.ClientSize.Height = висота клієнтської частини форми
+            pictureBox1.Left = (this.ClientSize.Width - pictureBox1.Width) / 2; // x координата
+            pictureBox1.Top = (this.ClientSize.Height - pictureBox1.Height) / 2; // y координата
         }
 
         private void label1_Click(object sender, EventArgs e)

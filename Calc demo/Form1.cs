@@ -2,7 +2,7 @@ namespace Calc_demo
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1() // ctor
         {
             InitializeComponent();
         }
@@ -11,7 +11,7 @@ namespace Calc_demo
         {
             if (textBox1.Text == "")
             {
-                MessageBox.Show("Please enter numbers in both fields.", "Input Error", 
+                MessageBox.Show("Please enter numbers in both fields.", "Input Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -22,9 +22,17 @@ namespace Calc_demo
             }
             else
             {
-                MessageBox.Show("Invalid input. Please enter a valid number.", "Input Error", 
+                MessageBox.Show("Invalid input. Please enter a valid number.", "Input Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            numericUpDown1.Minimum = -100;
+            numericUpDown1.Maximum = 100;
+            numericUpDown1.Value = 0;
+            numericUpDown1.Increment = 0.5m; // 5 ? 10
         }
     }
 }

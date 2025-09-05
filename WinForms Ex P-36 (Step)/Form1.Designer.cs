@@ -33,6 +33,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             button1 = new Button();
             label1 = new Label();
+            timer2 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             pictureBox1.Location = new Point(392, 231);
             pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(129, 70);
+            pictureBox1.Size = new Size(135, 72);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -56,7 +57,7 @@
             button1.Name = "button1";
             button1.Size = new Size(107, 32);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Start again";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -94,5 +95,6 @@
         private System.Windows.Forms.Timer timer1;
         private Button button1;
         private Label label1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
